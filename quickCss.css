@@ -4,14 +4,12 @@
   --Font-Used: "Inter", sans-serif; // You need inter installed for this to work
   --Font-Size: 15px;
   --Font-Style: normal;
-  --Font-Weight: normal;
   --Font-Variant: normal;
 }
 
 *:not([class*="hljs"]):not(code) {
   font-family: var(--Font-Used) !important;
   font-style: var(--Font-Style) !important;
-  font-weight: var(--Font-Weight) !important;
   font-variant: var(--Font-Variant) !important;
 }
 
