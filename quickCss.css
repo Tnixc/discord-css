@@ -133,7 +133,7 @@ div[class*="upsellOverlayContainer_"] {
 div[class^="premiumFeatureBorder"] {
   display: none;
 }
-.containerWrapper_fa6aa6.animation_fb8933.withoutAvatar__0549d{
+.containerWrapper_fa6aa6.animation_fb8933.withoutAvatar__0549d {
   display: none;
 }
 /* Profiles: Profile effect box (this only gets the separator because of the above rule*/
@@ -354,24 +354,26 @@ div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div {
 /* Collapse sidebars when screen is narrow */
 @media (max-width: 1000px) {
   .sidebar_ded4b5 {
-      width: 60px;
-      transition-duration: 0.125s;
+    width: 60px;
+    transition-duration: 0.125s;
   }
   .sidebar_ded4b5:hover {
-      width: 240px;
+    width: 240px;
   }
   .container_b2ce9c {
-      width: 60px;
-      transition-duration: 0.125s;
+    width: 60px;
+    transition-duration: 0.125s;
   }
   .container_b2ce9c:hover {
-      width: 240px;
+    width: 240px;
   }
 }
 
 /* Attatch animation */
 /* https://github.com/ToxicAven/discord */
-html:not(.reduce-motion) div[class^=scrollableContainer] ul[class^=channelAttachmentArea] {
+html:not(.reduce-motion)
+  div[class^="scrollableContainer"]
+  ul[class^="channelAttachmentArea"] {
   animation-name: attachmentAnimation;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -387,34 +389,84 @@ html:not(.reduce-motion) div[class^=scrollableContainer] ul[class^=channelAttach
 }
 /* Search bar animation */
 /* https://github.com/ToxicAven/discord */
-html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class^=search] div[class^=searchBar] {
+html:not(.reduce-motion)
+  section[class^="title"]
+  div[class^="toolbar"]
+  div[class^="search"]
+  div[class^="searchBar"] {
   background: none !important;
   width: 24px;
   color: var(--color-text);
   transition: width 0.2s, padding 0.5s;
   padding: 0;
 }
-html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class^=search] div[class^=searchBar] div[class^=iconContainer] {
+html:not(.reduce-motion)
+  section[class^="title"]
+  div[class^="toolbar"]
+  div[class^="search"]
+  div[class^="searchBar"]
+  div[class^="iconContainer"] {
   width: 24px !important;
   height: 24px;
   cursor: pointer !important;
 }
-html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class^=search] div[class^=searchBar],
-html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class^=search] div[class^=searchBar] svg {
+html:not(.reduce-motion)
+  section[class^="title"]
+  div[class^="toolbar"]
+  div[class^="search"]
+  div[class^="searchBar"],
+html:not(.reduce-motion)
+  section[class^="title"]
+  div[class^="toolbar"]
+  div[class^="search"]
+  div[class^="searchBar"]
+  svg {
   color: var(--color-text);
   width: 24px;
   height: 24px;
   padding: 0.5px;
 }
-html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class*=open_] div[class^=searchBar] {
+html:not(.reduce-motion)
+  section[class^="title"]
+  div[class^="toolbar"]
+  div[class*="open_"]
+  div[class^="searchBar"] {
   width: 300px !important;
   padding: 0 10px !important;
 }
-html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class*=open_] div[class^=searchBar] svg {
+html:not(.reduce-motion)
+  section[class^="title"]
+  div[class^="toolbar"]
+  div[class*="open_"]
+  div[class^="searchBar"]
+  svg {
   color: var(--text-muted);
   transform: scale(0.8);
 }
 /* Make new messages bar not be so long */
-div[class^="newMessagesBar"]{
+div[class^="newMessagesBar"] {
   width: fit-content;
+}
+/* jumpToPresentBar__0ff7f barBase__4e0ba */
+div[class^="jumpToPresentBar"] {
+  width: fit-content;
+  padding-inline: 0rem;
+  padding-block: 0rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div[class^="jumpToPresentBar"] > button:nth-child(1) {
+  display: none !important;
+}
+div[class^="jumpToPresentBar"] > button:nth-child(2) {
+  font-weight: bold !important;
+}
+svg[class^="barButtonIcon"] {
+  transform: scale(1.5);
 }
