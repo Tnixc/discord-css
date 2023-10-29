@@ -447,14 +447,14 @@ html:not(.reduce-motion)
 div[class^="newMessagesBar"] {
   width: fit-content;
 }
-/* jumpToPresentBar__0ff7f barBase__4e0ba */
+/* Change jump to present bar appearence */
 div[class^="jumpToPresentBar"] {
   width: fit-content;
   padding-inline: 0rem;
   padding-block: 0rem;
   margin-left: auto;
   margin-right: 2rem;
-  margin-bottom: 2rem;
+  transform: translateY(-2rem);
   border-radius: 2rem;
   display: flex;
   align-items: center;
