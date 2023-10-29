@@ -1,0 +1,420 @@
+/* Change discord font https://gist.github.com/BBoldt/67438fb40301144235272bdb01e1336b */
+@import url(https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Fonts/DiscordFont.css);
+:root {
+  --Font-Used: "Inter", sans-serif; // You need inter installed for this to work
+  --Font-Size: 15px;
+  --Font-Style: normal;
+  --Font-Weight: normal;
+  --Font-Variant: normal;
+}
+
+*:not([class*="hljs"]):not(code) {
+  font-family: var(--Font-Used) !important;
+  font-style: var(--Font-Style) !important;
+  font-weight: var(--Font-Weight) !important;
+  font-variant: var(--Font-Variant) !important;
+}
+
+.markup:not(code) {
+  font-size: var(--Font-Size) !important;
+}
+
+[class^="sidebar_"] [class^="panels_"] {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  border: 1px solid var(--background-modifier-accent);
+  border-radius: 8px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.45);
+}
+
+[class^="sidebar_"] [class^="panels_"] [class^="container_"],
+[class^="sidebar_"] [class^="panels_"] [class^="panel_"] {
+  background-color: transparent !important;
+}
+
+[class^="sidebar_"]
+  [class^="panels_"]
+  [class^="container_"]
+  [class^="avatarWrapper_"]
+  + [class^="flex_"] {
+  margin-left: -10px;
+}
+
+#vc-spotify-player {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Hide Nitro stuff */
+/* https://gist.github.com/TheSunCat/58fedaa19d6154ef3e4b2b676c286906 */
+/* Nitro Theme Shit */
+html.custom-theme-background [class^="sidebar_"] {
+  background: var(--bg-overlay-3);
+}
+html.custom-theme-background [class^="sidebar_"] [class^="panels_"] {
+  background: var(--bg-overlay-1);
+}
+
+/* Chatbox buttons */
+div[aria-label="Start an Activity"] {
+  display: none;
+}
+button[aria-label="Send a gift"] {
+  display: none;
+}
+button[aria-label="Open GIF picker"] {
+  display: none;
+}
+button[aria-label="Open sticker picker"] {
+  display: none;
+}
+
+/* Hide Nitro button in Home */
+a[data-list-item-id$="___nitro"] {
+  display: none;
+}
+
+/* Hide shop button in Home */
+a[data-list-item-id*="shop"] {
+  display: none;
+}
+
+/* Hide Nitro tabs in Settings */
+div[aria-label="User Settings"] > div[aria-label="Nitro"] {
+  display: none;
+}
+div[aria-label="User Settings"] > div[aria-label="Nitro"] + div {
+  display: none;
+}
+div[aria-label="User Settings"] > div[aria-label="Subscriptions"] {
+  display: none;
+}
+div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] {
+  display: none;
+}
+div[aria-label="User Settings"]
+  > div[aria-label="Gift Inventory"]
+  + div[class^="item_"] {
+  display: none;
+}
+
+/* Hide Nitro separator in settings */
+div[aria-label="User Settings"]
+  > div[aria-label="Gift Inventory"]
+  + div[class^="item_"]
+  + div[class^="separator"] {
+  display: none;
+}
+
+/* Hide Billing header and separator */
+div[aria-label="User Settings"]
+  > div[aria-label="Connections"]
+  + div[class^="item_"]
+  + div[class^="separator_"]
+  + div[class^="header_"] {
+  display: none;
+}
+div[aria-label="User Settings"]
+  > div[aria-label="Connections"]
+  + div[class^="item_"]
+  + div[class^="separator_"]
+  + div[class^="header_"]
+  ~ div[class^="header_"] {
+  display: block;
+}
+
+/* Server Profiles: Make unique profiles for each server box */
+div[class*="upsellOverlayContainer_"] {
+  display: none;
+}
+
+/* Profiles: Try out Nitro! box */
+div[class^="premiumFeatureBorder"] {
+  display: none;
+}
+.containerWrapper_fa6aa6.animation_fb8933.withoutAvatar__0549d{
+  display: none;
+}
+/* Profiles: Profile effect box (this only gets the separator because of the above rule*/
+div[class^="customizationSection"]:has(div[class^="premiumFeatureBorder"]) {
+  display: none;
+}
+
+/* Profiles: Per server avatar */
+div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] {
+  display: none;
+}
+div[class^="imageUploaderInner"]
+  + div[class^="imageUploaderHint"]
+  + div[class^="imageUploaderIcon"] {
+  display: none;
+}
+
+/* Profiles: Hide profile customization ad in banners */
+div[class^="bannerNitroUpsell"] {
+  display: none;
+}
+
+/* Voice & Video: Soundboard section */
+div[class^="container"]:has(
+    div[class^="children"] > div[class^="soundboardRow"]
+  ) {
+  display: none;
+}
+
+/* Appearance: Hide app icon upsell */
+div[class^="selectionGroup"]:has(
+    div[role="radiogroup"]
+      > div
+      > div[class^="presets"]
+      > [class*="appIconSelectionContainer"]
+  ) {
+  display: none;
+}
+
+/* Appearance: Theme upsells */
+section[class*="basicThemeSelectors_"] + section {
+  display: none;
+}
+
+/* Hide sticker picker */
+button[id="sticker-picker-tab"] {
+  display: none;
+}
+
+/* Hide message size upsells */
+div[class^="characterCount"] > div[class*=" upsell_"] {
+  display: none;
+}
+
+/* Hide Go Live quality upsells */
+button[class*=" selectorButtonPremiumRequired"] {
+  display: none;
+}
+
+/* Hide ad in profile banners */
+div[class^="premiumIconWrapper"] {
+  display: none;
+}
+
+/* ------------- */
+/* Server boosts */
+/* ------------- */
+
+/* Server Boost button in top left dropdown */
+div[id="guild-header-popout-premium-subscribe"] {
+  display: none;
+}
+div[role="group"]:has(div[id="guild-header-popout-premium-subscribe"])
+  + div[role="separator"] {
+  display: none;
+}
+
+/* Server settings: Boost tab */
+div[class^="serverBoostTabItem"] {
+  display: none;
+}
+div[class^="serverBoostTabItem"] + div[class^="separator"] {
+  display: none;
+}
+
+/* Server settings: Overview */
+div[class^="divider"]:has(div > div > div > div[class^="upsell"]) {
+  display: none;
+}
+
+/* TODO: Hide role icon in Roles tab when we don't have boost lvl 2 */
+
+/* Server settings: Stickers tab */
+/* NOTE: risky, but seems ok for now */
+div[class^="children_"] > div[class^="upsellContainer"] {
+  display: none;
+}
+div[class*="tierHeaderUnlocked"] + div {
+  display: none;
+}
+div[class*="tier_"]:has(div[class^="tierHeaderLocked"]) {
+  display: none;
+}
+div[class^="tierInProgress"] {
+  display: none;
+}
+
+/* Server settings: Custom Invite Link tab */
+button[class^="shinyButton"]:has(div[class*="upsellButton"]) {
+  display: none;
+}
+
+/* Boost progress bar */
+/* NOTE: risky, but seems ok for now */
+ul[aria-label="Channels"] > div[role="button"][class^="container"] {
+  display: none;
+}
+
+/* --------------- */
+/* Super reactions */
+/* --------------- */
+
+/* Super reactions button */
+button[id="super-reaction-picker-tab"] {
+  display: none;
+}
+
+/* Super reaction animation */
+div[class*="shakeReaction"] {
+  animation: none !important;
+}
+div[class^="reactionInner"] > div > div[class^="effectsWrapper"] {
+  display: none;
+}
+img[class*="hideEmoji"] {
+  animation: blink-emoji 1s linear infinite;
+  opacity: 255;
+}
+@keyframes blink-emoji {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Add Super Reaction menu item */
+#message-add-reaction-1 {
+  display: none;
+}
+#message-actions-add-reaction-1 {
+  display: none;
+}
+div[aria-label="Add Super Reaction"] {
+  display: none;
+}
+
+/* Upsell when hovering a Super Reaction */
+div[class^="burstReactionTooltipPrompt"] {
+  display: none;
+}
+
+/* ------------------ */
+/* General annoyances */
+/* ------------------ */
+
+/* Avatar decorations */
+svg[class*="avatarDecoration_"] {
+  display: none;
+}
+img[class^="avatarDecoration_"] {
+  display: none;
+}
+
+/* Profile effects */
+div[class^="profileEffects"] {
+  display: none;
+}
+
+/* Animated "Activities" hover effect in calls */
+/* NOTE: would be nice to disable the white hover effect,
+ * but that'd break when you're actually in an activity */
+div[aria-labelledby^="vc-activities"] {
+  display: none;
+}
+
+/* Bugfix laggy server scroll */
+div[data-dnd-name] > div[class^="wrapper"] svg {
+  overflow: hidden;
+}
+
+/* Hide Help button */
+div[aria-label="Help"] {
+  display: none;
+}
+
+/* Hide explore servers button */
+div[aria-label="Servers"] + div + div {
+  display: none;
+}
+
+/* Hide download button */
+div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div {
+  display: none;
+} /* separator */
+div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div {
+  display: none;
+} /* button & click target */
+
+/* "Falloween" in (user) profile */
+[class*="falloweenBackgroundImage"] {
+  display: none;
+}
+[class*="falloweenArtContainer"] {
+  display: none;
+}
+[class*="artContainer"] {
+  display: none;
+}
+/* Collapse sidebars when screen is narrow */
+@media (max-width: 1000px) {
+  .sidebar_ded4b5 {
+      width: 60px;
+      transition-duration: 0.125s;
+  }
+  .sidebar_ded4b5:hover {
+      width: 240px;
+  }
+  .container_b2ce9c {
+      width: 60px;
+      transition-duration: 0.125s;
+  }
+  .container_b2ce9c:hover {
+      width: 240px;
+  }
+}
+
+/* Attatch animation */
+/* https://github.com/ToxicAven/discord */
+html:not(.reduce-motion) div[class^=scrollableContainer] ul[class^=channelAttachmentArea] {
+  animation-name: attachmentAnimation;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes attachmentAnimation {
+  from {
+    height: 0;
+  }
+  to {
+    height: 218px;
+  }
+}
+/* Search bar animation */
+/* https://github.com/ToxicAven/discord */
+html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class^=search] div[class^=searchBar] {
+  background: none !important;
+  width: 24px;
+  color: var(--color-text);
+  transition: width 0.2s, padding 0.5s;
+  padding: 0;
+}
+html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class^=search] div[class^=searchBar] div[class^=iconContainer] {
+  width: 24px !important;
+  height: 24px;
+  cursor: pointer !important;
+}
+html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class^=search] div[class^=searchBar],
+html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class^=search] div[class^=searchBar] svg {
+  color: var(--color-text);
+  width: 24px;
+  height: 24px;
+  padding: 0.5px;
+}
+html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class*=open_] div[class^=searchBar] {
+  width: 300px !important;
+  padding: 0 10px !important;
+}
+html:not(.reduce-motion) section[class^=title] div[class^=toolbar] div[class*=open_] div[class^=searchBar] svg {
+  color: var(--text-muted);
+  transform: scale(0.8);
+}
+/* Make new messages bar not be so long */
+div[class^="newMessagesBar"]{
+  width: fit-content;
+}
