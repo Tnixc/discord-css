@@ -1,5 +1,7 @@
 /* Change discord font https://gist.github.com/BBoldt/67438fb40301144235272bdb01e1336b */
+@import url("https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/icons.css");
 @import url(https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Fonts/DiscordFont.css);
+
 :root {
   --Font-Used: "Inter", sans-serif; // You need inter installed for this to work
   --Font-Size: 15px;
