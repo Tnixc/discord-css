@@ -24,19 +24,8 @@
   font-size: var(--Font-Size) !important;
 }
 
-[class^="sidebar_"] [class^="panels_"] {
-  margin-right: 5px;
-  margin-bottom: 5px;
-  margin-left: 5px;
-  border: 1px solid var(--background-modifier-accent);
-  border-radius: 8px;
-  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.45);
-}
 
-[class^="sidebar_"] [class^="panels_"] [class^="container_"],
-[class^="sidebar_"] [class^="panels_"] [class^="panel_"] {
-  background-color: transparent !important;
-}
+
 
 [class^="sidebar_"]
   [class^="panels_"]
@@ -637,4 +626,44 @@ border: 2px solid transparent;
   opacity: 0.2;
   padding-inline: 5px;
   border-radius: 5px;
+}
+/* Match channel text area to user container */
+/* https://discord.com/channels/1015060230222131221/1028106818368589824/1166651812200317018 */
+.form__13a2c {
+  padding: 0;
+}
+
+.channelTextArea__2e60f {
+  margin: 0;
+}
+
+.scrollableContainer__33e06 {
+  border-radius: 0;
+}
+
+.inner__9fd0b {
+  min-height: 48px;
+  padding-top: 4px;
+}
+
+/* Move typing indicators */
+.typing__6fd1d {
+  top: -24px;
+  left: 0px;
+  width: fit-content;
+  padding-right: 9px;
+  border-radius: 0 8px 0 0;
+  background: var(--bg-overlay-3,var(--channeltextarea-background));
+}
+
+/* Remove single pixel padding from user container */
+.container_ca50b9 {
+  margin: 0;
+}
+/* End Match channel text area to user container */
+/* .contents_f41bb2 Such that this doesn't show up on embeds */
+.contents_f41bb2 .anchor_c8ddc0[title$=")"]::after {
+  font-size: 0.7rem;
+  content: " (" attr(href) ")";
+  opacity: 0.5;
 }
