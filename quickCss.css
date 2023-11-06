@@ -1,7 +1,8 @@
 /* Change discord font https://gist.github.com/BBoldt/67438fb40301144235272bdb01e1336b */
-@import url("https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/icons.css");
 @import url(https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Fonts/DiscordFont.css);
-
+@import url(https://ShadowDevilsAvenged.github.io/SnippetsHere/ChatBubbleTempFix.css);
+@import url(https://ShadowDevilsAvenged.github.io/SnippetsHere/BearableInboxTempFix.css);
+@import url("https://syndishanx.github.io/Discord-Dark/Imports/SettingsIcons.css");
 :root {
   --Font-Used: "Inter", sans-serif; // You need inter installed for this to work
   --Font-Size: 15px;
@@ -470,3 +471,150 @@ div[class^="jumpToPresentBar"] > button:nth-child(2) {
 svg[class^="barButtonIcon"] {
   transform: scale(1.5);
 }
+/* Change role styles in user popout */
+.role__631a3 {
+  transform: translate(0);
+  overflow: hidden;
+  border: 0;
+
+  --transparency: .4; /*Change Background Opacity*/
+  border-radius: 5px; /*Change Roundness of Roles*/
+}
+.role__631a3 .roleRemoveIcon__7f63d {
+  margin: 0;
+  left: unset;
+  transform: translate(50%,-50%);
+}
+.role__631a3 .roleRemoveButton__737f2 {
+  position: static;
+}
+.role__631a3 .roleCircle_bae511:after {
+  content: '';
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  opacity: var(--transparency);
+}
+:root{
+--roles-roundness: 0; /* change the 0 to any other number if you want the roles to be fully round */
+--roles-roundness-calc: calc((var(--roles-roundness) + .21) * 25px)
+}
+.role__631a3 {
+transform: translate(0);
+border: 0;
+border-radius: var(--roles-roundness-calc);
+}
+.role__631a3 .roleRemoveIcon__7f63d {
+margin: 0;
+left: unset;
+transform: translate(50%,-50%);
+}
+.role__631a3 .roleRemoveButton__737f2{position: static}
+.role__631a3 .roleCircle_bae511:before {
+content: '';
+top: 0;left: 0;
+z-index: -1;
+width: 100%;
+height: 100%;
+box-sizing: border-box;
+position: absolute;
+background: inherit;
+border-radius: var(--roles-roundness-calc);
+border: 2px solid transparent;
+-webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+-webkit-mask-composite: xor;
+}
+.role__631a3 {
+  position: relative;
+  background: none !important;
+  border: 0;
+}
+.roleRemoveButton__737f2 {
+  position: static;
+}
+.roleRemoveIcon__7f63d {
+  left: 10.5px;
+}
+.roleCircle_bae511 {
+  margin-left: 1px;
+}
+.roleCircle_bae511:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  border: 1px solid transparent;
+  border-radius: var(--radius-round);
+  box-sizing: border-box;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+.addButton_c648bf, .addRoleContainer__23777 {
+  background: none !important;
+  border: 1px solid hsl(214,calc(var(--saturation-factor, 1)*8.2%),33.3%);
+  border-radius: var(--radius-round);
+  width: 22px;
+  height: 22px;
+  padding: 0;
+}
+.role__631a3:has(.roleFlowerStar__170d5) {
+  border: 1px solid var(--header-primary);
+  border-radius: var(--radius-round);
+  padding: 0;
+}
+/* Role color in member list */
+.member_aa4760 span.username_d272d6::after {
+  content: "";
+  background: currentColor;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.1;
+  left: 0;
+  top: 0;
+}
+.role__631a3 {
+  position: relative;
+  background: none !important;
+  border: 0;
+}
+.roleRemoveButton__737f2 {
+  position: static;
+}
+.roleRemoveIcon__7f63d {
+  left: 10.5px;
+}
+.roleCircle_bae511 {
+  margin-left: 1px;
+}
+.roleCircle_bae511:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  border: 1px solid transparent;
+  border-radius: var(--radius-round);
+  box-sizing: border-box;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+.addButton_c648bf, .addRoleContainer__23777 {
+  background: none !important;
+  border: 1px solid hsl(214,calc(var(--saturation-factor, 1)*8.2%),33.3%);
+  border-radius: var(--radius-round);
+  width: 22px;
+  height: 22px;
+  padding: 0;
+}
+.role__631a3:has(.roleFlowerStar__170d5) {
+  border: 1px solid var(--header-primary);
+  border-radius: var(--radius-round);
+  padding: 0;
+}
+/* ^ From better discord snippets */
