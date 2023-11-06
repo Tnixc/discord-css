@@ -3,6 +3,7 @@
 @import url(https://ShadowDevilsAvenged.github.io/SnippetsHere/ChatBubbleTempFix.css);
 @import url(https://ShadowDevilsAvenged.github.io/SnippetsHere/BearableInboxTempFix.css);
 @import url("https://syndishanx.github.io/Discord-Dark/Imports/SettingsIcons.css");
+
 :root {
   --Font-Used: "Inter", sans-serif; // You need inter installed for this to work
   --Font-Size: 15px;
@@ -15,7 +16,10 @@
   font-style: var(--Font-Style) !important;
   font-variant: var(--Font-Variant) !important;
 }
-
+.groupStart__56db5.cozyMessage__64ce7>.contents_f41bb2,
+.cozyMessage__64ce7:not(.groupStart__56db5)>.contents_f41bb2>.markup_a7e664:not(:empty, .searchResultsWrap__9f374 *) {
+    border-radius: 0 12px 12px 12px;
+}
 .markup:not(code) {
   font-size: var(--Font-Size) !important;
 }
@@ -578,6 +582,7 @@ border: 2px solid transparent;
   left: 0;
   top: 0;
 }
+/*  */
 .role__631a3 {
   position: relative;
   background: none !important;
@@ -618,3 +623,20 @@ border: 2px solid transparent;
   padding: 0;
 }
 /* ^ From better discord snippets */
+/* Background thingy in the chat */
+.username_d30d99[style]{
+  position: relative;
+  padding-inline: 5px;
+  border-radius: 5px;
+  outline: 1px solid currentColor;
+  margin-left: 2px;
+}
+.username_d30d99[style]::after {
+  content: "";
+  background: currentColor;
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  padding-inline: 5px;
+  border-radius: 5px;
+}
