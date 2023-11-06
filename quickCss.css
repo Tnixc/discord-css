@@ -628,8 +628,6 @@ border: 2px solid transparent;
   position: relative;
   padding-inline: 5px;
   border-radius: 5px;
-  outline: 1px solid currentColor;
-  margin-left: 2px;
 }
 .username_d30d99[style]::after {
   content: "";
