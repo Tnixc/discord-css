@@ -218,8 +218,6 @@ div[class^="divider"]:has(div > div > div > div[class^="upsell"]) {
   display: none;
 }
 
-/* TODO: Hide role icon in Roles tab when we don't have boost lvl 2 */
-
 /* Server settings: Stickers tab */
 /* NOTE: risky, but seems ok for now */
 div[class^="children_"] > div[class^="upsellContainer"] {
@@ -669,5 +667,9 @@ border: 2px solid transparent;
 }
 /* Hide input if you can't talk */
 .channelTextAreaDisabled_c43b1c{
+  display: none;
+}
+/* Hide profile thing in channels & roles because it's broken */
+.profile_b28ef9 {
   display: none;
 }
