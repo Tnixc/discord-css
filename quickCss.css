@@ -667,3 +667,7 @@ border: 2px solid transparent;
   content: " (" attr(href) ")";
   opacity: 0.5;
 }
+/* Hide input if you can't talk */
+.channelTextAreaDisabled_c43b1c{
+  display: none;
+}
