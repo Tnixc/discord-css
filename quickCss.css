@@ -5,7 +5,7 @@
 @import url("https://syndishanx.github.io/Discord-Dark/Imports/SettingsIcons.css");
 
 :root {
-  --Font-Used: "Inter", sans-serif; // You need inter installed for this to work
+  --Font-Used: "Inter", sans-serif; /* You need inter installed for this to work */
   --Font-Size: 15px;
   --Font-Style: normal;
   --Font-Variant: normal;
@@ -24,9 +24,6 @@
   font-size: var(--Font-Size) !important;
 }
 
-
-
-
 [class^="sidebar_"]
   [class^="panels_"]
   [class^="container_"]
@@ -34,6 +31,7 @@
   + [class^="flex_"] {
   margin-left: -10px;
 }
+
 
 #vc-spotify-player {
   border-top-left-radius: 20px;
@@ -345,18 +343,18 @@ div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div {
 }
 /* Collapse sidebars when screen is narrow */
 @media (max-width: 1000px) {
-  .sidebar_ded4b5 {
+  div.sidebar_ded4b5 {
     width: 60px;
     transition-duration: 0.125s;
   }
-  .sidebar_ded4b5:hover {
+  div.sidebar_ded4b5:hover {
     width: 240px;
   }
-  .container_b2ce9c {
+  div.container_b2ce9c {
     width: 60px;
     transition-duration: 0.125s;
   }
-  .container_b2ce9c:hover {
+  div.container_b2ce9c:hover {
     width: 240px;
   }
 }
