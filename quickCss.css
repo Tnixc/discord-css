@@ -2,7 +2,7 @@
 @import url(https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Fonts/DiscordFont.css);
 @import url(https://ShadowDevilsAvenged.github.io/SnippetsHere/ChatBubbleTempFix.css);
 @import url(https://ShadowDevilsAvenged.github.io/SnippetsHere/BearableInboxTempFix.css);
-@import url("https://syndishanx.github.io/Discord-Dark/Imports/SettingsIcons.css");
+@import url(https://syndishanx.github.io/Discord-Dark/Imports/SettingsIcons.css);
 
 :root {
   --Font-Used: "Inter", sans-serif; /* You need inter installed for this to work */
@@ -39,6 +39,13 @@
 }
 
 /* Hide Nitro stuff */
+
+
+#profile-customization-tab > div.container_d6bff4.containerDefaultMargin_dcee92{
+	display: none;
+}
+
+
 /* https://gist.github.com/TheSunCat/58fedaa19d6154ef3e4b2b676c286906 */
 /* Nitro Theme Shit */
 html.custom-theme-background [class^="sidebar_"] {
