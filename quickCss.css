@@ -1,8 +1,6 @@
-/* Change discord font https://gist.github.com/BBoldt/67438fb40301144235272bdb01e1336b */
 @import url(https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Fonts/DiscordFont.css);
 @import url(https://ShadowDevilsAvenged.github.io/SnippetsHere/ChatBubbleTempFix.css);
 @import url(https://ShadowDevilsAvenged.github.io/SnippetsHere/BearableInboxTempFix.css);
-@import url(https://syndishanx.github.io/Discord-Dark/Imports/SettingsIcons.css);
 
 :root {
   --Font-Used: "Inter", sans-serif; /* You need inter installed for this to work */
@@ -16,9 +14,11 @@
   font-style: var(--Font-Style) !important;
   font-variant: var(--Font-Variant) !important;
 }
-.groupStart__56db5.cozyMessage__64ce7>.contents_f41bb2,
-.cozyMessage__64ce7:not(.groupStart__56db5)>.contents_f41bb2>.markup_a7e664:not(:empty, .searchResultsWrap__9f374 *) {
-    border-radius: 0 12px 12px 12px;
+.groupStart__56db5.cozyMessage__64ce7 > .contents_f41bb2,
+.cozyMessage__64ce7:not(.groupStart__56db5)
+  > .contents_f41bb2
+  > .markup_a7e664:not(:empty, .searchResultsWrap__9f374 *) {
+  border-radius: 0 12px 12px 12px;
 }
 .markup:not(code) {
   font-size: var(--Font-Size) !important;
@@ -32,20 +32,12 @@
   margin-left: -10px;
 }
 
-
 #vc-spotify-player {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 /* Hide Nitro stuff */
-
-
-#profile-customization-tab > div.container_d6bff4.containerDefaultMargin_dcee92{
-	display: none;
-}
-
-
 /* https://gist.github.com/TheSunCat/58fedaa19d6154ef3e4b2b676c286906 */
 /* Nitro Theme Shit */
 html.custom-theme-background [class^="sidebar_"] {
@@ -349,23 +341,25 @@ div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div {
   display: none;
 }
 /* Collapse sidebars when screen is narrow */
-@media (max-width: 1000px) {
-  div.sidebar_ded4b5 {
+/* Collapse sidebars when screen is narrow */
+@media (max-width: 1024px) {
+  /* Channel list*/
+  .sidebar_ded4b5 {
     width: 60px;
     transition-duration: 0.125s;
   }
-  div.sidebar_ded4b5:hover {
+  .sidebar_ded4b5:hover {
     width: 240px;
   }
-  div.container_b2ce9c {
+  /* Members list*/
+  .container_b2ce9c {
     width: 60px;
     transition-duration: 0.125s;
   }
-  div.container_b2ce9c:hover {
+  .container_b2ce9c:hover {
     width: 240px;
   }
 }
-
 /* Attatch animation */
 /* https://github.com/ToxicAven/discord */
 html:not(.reduce-motion)
@@ -473,19 +467,19 @@ svg[class^="barButtonIcon"] {
   overflow: hidden;
   border: 0;
 
-  --transparency: .4; /*Change Background Opacity*/
+  --transparency: 0.4; /*Change Background Opacity*/
   border-radius: 5px; /*Change Roundness of Roles*/
 }
 .role__631a3 .roleRemoveIcon__7f63d {
   margin: 0;
   left: unset;
-  transform: translate(50%,-50%);
+  transform: translate(50%, -50%);
 }
 .role__631a3 .roleRemoveButton__737f2 {
   position: static;
 }
 .role__631a3 .roleCircle_bae511:after {
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   z-index: -1;
@@ -495,34 +489,37 @@ svg[class^="barButtonIcon"] {
   background: inherit;
   opacity: var(--transparency);
 }
-:root{
---roles-roundness: 0; /* change the 0 to any other number if you want the roles to be fully round */
---roles-roundness-calc: calc((var(--roles-roundness) + .21) * 25px)
+:root {
+  --roles-roundness: 0; /* change the 0 to any other number if you want the roles to be fully round */
+  --roles-roundness-calc: calc((var(--roles-roundness) + 0.21) * 25px);
 }
 .role__631a3 {
-transform: translate(0);
-border: 0;
-border-radius: var(--roles-roundness-calc);
+  transform: translate(0);
+  border: 0;
+  border-radius: var(--roles-roundness-calc);
 }
 .role__631a3 .roleRemoveIcon__7f63d {
-margin: 0;
-left: unset;
-transform: translate(50%,-50%);
+  margin: 0;
+  left: unset;
+  transform: translate(50%, -50%);
 }
-.role__631a3 .roleRemoveButton__737f2{position: static}
+.role__631a3 .roleRemoveButton__737f2 {
+  position: static;
+}
 .role__631a3 .roleCircle_bae511:before {
-content: '';
-top: 0;left: 0;
-z-index: -1;
-width: 100%;
-height: 100%;
-box-sizing: border-box;
-position: absolute;
-background: inherit;
-border-radius: var(--roles-roundness-calc);
-border: 2px solid transparent;
--webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
--webkit-mask-composite: xor;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  background: inherit;
+  border-radius: var(--roles-roundness-calc);
+  border: 2px solid transparent;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
 }
 .role__631a3 {
   position: relative;
@@ -550,9 +547,10 @@ border: 2px solid transparent;
   -webkit-mask-composite: xor;
   pointer-events: none;
 }
-.addButton_c648bf, .addRoleContainer__23777 {
+.addButton_c648bf,
+.addRoleContainer__23777 {
   background: none !important;
-  border: 1px solid hsl(214,calc(var(--saturation-factor, 1)*8.2%),33.3%);
+  border: 1px solid hsl(214, calc(var(--saturation-factor, 1) * 8.2%), 33.3%);
   border-radius: var(--radius-round);
   width: 22px;
   height: 22px;
@@ -601,9 +599,10 @@ border: 2px solid transparent;
   -webkit-mask-composite: xor;
   pointer-events: none;
 }
-.addButton_c648bf, .addRoleContainer__23777 {
+.addButton_c648bf,
+.addRoleContainer__23777 {
   background: none !important;
-  border: 1px solid hsl(214,calc(var(--saturation-factor, 1)*8.2%),33.3%);
+  border: 1px solid hsl(214, calc(var(--saturation-factor, 1) * 8.2%), 33.3%);
   border-radius: var(--radius-round);
   width: 22px;
   height: 22px;
@@ -616,7 +615,7 @@ border: 2px solid transparent;
 }
 /* ^ From better discord snippets */
 /* Background thingy in the chat */
-.username_d30d99[style]{
+.username_d30d99[style] {
   position: relative;
   padding-inline: 5px;
   border-radius: 5px;
@@ -656,7 +655,7 @@ border: 2px solid transparent;
   width: fit-content;
   padding-right: 9px;
   border-radius: 0 8px 0 0;
-  background: var(--bg-overlay-3,var(--channeltextarea-background));
+  background: var(--bg-overlay-3, var(--channeltextarea-background));
 }
 
 /* Remove single pixel padding from user container */
@@ -671,17 +670,30 @@ border: 2px solid transparent;
   opacity: 0.5;
 }
 /* Hide input if you can't talk */
-.channelTextAreaDisabled_c43b1c{
+.channelTextAreaDisabled_c43b1c {
   display: none;
 }
 /* Hide profile thing in channels & roles because it's broken */
 .profile_b28ef9 {
   display: none;
 }
-.wrapper_fbbb73{
+.wrapper_fbbb73 {
   margin: 0;
 }
-/* Fix colors for message logger */
-.messagelogger-deleted [class*="contents"] > :is(div, h1, h2, h3, p) {
-    color: var(--status-danger) !important;
+
+video[data-testid="app-spinner"] {
+  filter: saturate(0) brightness(0) invert(74%) sepia(4%) saturate(3176%)
+    hue-rotate(196deg) brightness(101%) contrast(103%);
+}
+.theme-dark .combo__57290 .key__06fe6 {
+  color: var(--background-primary);
+}
+.panelTitleContainer__7a748 > .text-sm-normal_e612c7 {
+  background: linear-gradient(to right, #f584ff, #1c4ae2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ffa5e288, 0 0 8px #728fed88;
+  overflow: visible;
 }
