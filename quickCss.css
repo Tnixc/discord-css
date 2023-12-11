@@ -688,6 +688,9 @@ video[data-testid="app-spinner"] {
 .theme-dark .combo__57290 .key__06fe6 {
   color: var(--background-primary);
 }
+
+/* Glow on username on user panel */
+/* https://discord.com/channels/1015060230222131221/1134844326933954622/1183600285252329522 */
 .panelTitleContainer__7a748 > .text-sm-normal_e612c7 {
   background: linear-gradient(to right, #f584ff, #1c4ae2);
   background-clip: text;
