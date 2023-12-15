@@ -341,9 +341,8 @@ div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div {
   display: none;
 }
 /* Collapse sidebars when screen is narrow */
-/* Collapse sidebars when screen is narrow */
 @media (max-width: 1024px) {
-  /* Channel list*/
+  /* channel list*/
   .sidebar_ded4b5 {
     width: 60px;
     transition-duration: 0.125s;
@@ -351,15 +350,17 @@ div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div {
   .sidebar_ded4b5:hover {
     width: 240px;
   }
-  /* Members list*/
-  .container_b2ce9c {
-    width: 60px;
-    transition-duration: 0.125s;
+  /* members list */
+  .membersWrap__90226{
+    position: absolute;
+    right:-200px;
+    transition: 0.125s;
   }
-  .container_b2ce9c:hover {
-    width: 240px;
+  .membersWrap__90226:hover{
+    right: 0px;
   }
 }
+
 /* Attatch animation */
 /* https://github.com/ToxicAven/discord */
 html:not(.reduce-motion)
