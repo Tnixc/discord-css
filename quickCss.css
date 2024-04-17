@@ -1,703 +1,101 @@
-@import url(https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Fonts/DiscordFont.css);
-@import url(https://ShadowDevilsAvenged.github.io/SnippetsHere/ChatBubbleTempFix.css);
-@import url(https://ShadowDevilsAvenged.github.io/SnippetsHere/BearableInboxTempFix.css);
+@import url("https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css");
 
+/* Red NSFW warning indicator in channels  */
+@import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/NSFWChannelRecolor.css");
+/* Transparent popups */
+@import url("https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css");
+/* Better quick switcher */
+@import url("https://dablulite.github.io/css-snippets/QuickSwitchV2/import.css");
+
+/* Transparent popups config */
 :root {
-  --Font-Used: "Inter", sans-serif; /* You need inter installed for this to work */
-  --Font-Size: 15px;
-  --Font-Style: normal;
-  --Font-Variant: normal;
-}
+  --blur-popup: 1rem; /*Popup blur size*/
+  --opacity-popup: 0.8; /*Popup background opacity*/
+  --radius-popup: 2rem; /*Popup border radius*/
+  --radius-context: 1rem; /*Context menu popups radius*/
+  /*--pop-up-color: black; /*uncomment for custom Popup color*/
+  --context-menu-border: 1px solid var(--info-help-background); /*uncomment for custom border*/
 
-*:not([class*="hljs"]):not(code) {
-  font-family: var(--Font-Used) !important;
-  font-style: var(--Font-Style) !important;
-  font-variant: var(--Font-Variant) !important;
+  --font-primary: "SF Pro";
+  --font-display: "SF Pro";
+  --font-headline: "SF Pro";
+  --font-code: "Geist Mono";
 }
-.groupStart__56db5.cozyMessage__64ce7 > .contents_f41bb2,
-.cozyMessage__64ce7:not(.groupStart__56db5)
-  > .contents_f41bb2
-  > .markup_a7e664:not(:empty, .searchResultsWrap__9f374 *) {
-  border-radius: 0 12px 12px 12px;
-}
-.markup:not(code) {
-  font-size: var(--Font-Size) !important;
-}
+/* Fix icons on context menus */
 
-[class^="sidebar_"]
-  [class^="panels_"]
-  [class^="container_"]
-  [class^="avatarWrapper_"]
-  + [class^="flex_"] {
-  margin-left: -10px;
-}
-
-#vc-spotify-player {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-/* Hide Nitro stuff */
-/* https://gist.github.com/TheSunCat/58fedaa19d6154ef3e4b2b676c286906 */
-/* Nitro Theme Shit */
-html.custom-theme-background [class^="sidebar_"] {
-  background: var(--bg-overlay-3);
-}
-html.custom-theme-background [class^="sidebar_"] [class^="panels_"] {
-  background: var(--bg-overlay-1);
-}
-
-/* Chatbox buttons */
-div[aria-label="Start an Activity"] {
-  display: none;
-}
-button[aria-label="Send a gift"] {
-  display: none;
-}
-button[aria-label="Open GIF picker"] {
-  display: none;
-}
-button[aria-label="Open sticker picker"] {
-  display: none;
-}
-
-/* Hide Nitro button in Home */
-a[data-list-item-id$="___nitro"] {
-  display: none;
-}
-
-/* Hide shop button in Home */
-a[data-list-item-id*="shop"] {
-  display: none;
-}
-
-/* Hide Nitro tabs in Settings */
-div[aria-label="User Settings"] > div[aria-label="Nitro"] {
-  display: none;
-}
-div[aria-label="User Settings"] > div[aria-label="Nitro"] + div {
-  display: none;
-}
-div[aria-label="User Settings"] > div[aria-label="Subscriptions"] {
-  display: none;
-}
-div[aria-label="User Settings"] > div[aria-label="Gift Inventory"] {
-  display: none;
-}
-div[aria-label="User Settings"]
-  > div[aria-label="Gift Inventory"]
-  + div[class^="item_"] {
-  display: none;
-}
-
-/* Hide Nitro separator in settings */
-div[aria-label="User Settings"]
-  > div[aria-label="Gift Inventory"]
-  + div[class^="item_"]
-  + div[class^="separator"] {
-  display: none;
-}
-
-/* Hide Billing header and separator */
-div[aria-label="User Settings"]
-  > div[aria-label="Connections"]
-  + div[class^="item_"]
-  + div[class^="separator_"]
-  + div[class^="header_"] {
-  display: none;
-}
-div[aria-label="User Settings"]
-  > div[aria-label="Connections"]
-  + div[class^="item_"]
-  + div[class^="separator_"]
-  + div[class^="header_"]
-  ~ div[class^="header_"] {
-  display: block;
-}
-
-/* Server Profiles: Make unique profiles for each server box */
-div[class*="upsellOverlayContainer_"] {
-  display: none;
-}
-
-/* Profiles: Try out Nitro! box */
-div[class^="premiumFeatureBorder"] {
-  display: none;
-}
-.containerWrapper_fa6aa6.animation_fb8933.withoutAvatar__0549d {
-  display: none;
-}
-/* Profiles: Profile effect box (this only gets the separator because of the above rule*/
-div[class^="customizationSection"]:has(div[class^="premiumFeatureBorder"]) {
-  display: none;
-}
-
-/* Profiles: Per server avatar */
-div[class^="imageUploaderInner"] + div[class^="imageUploaderHint"] {
-  display: none;
-}
-div[class^="imageUploaderInner"]
-  + div[class^="imageUploaderHint"]
-  + div[class^="imageUploaderIcon"] {
-  display: none;
-}
-
-/* Profiles: Hide profile customization ad in banners */
-div[class^="bannerNitroUpsell"] {
-  display: none;
-}
-
-/* Voice & Video: Soundboard section */
-div[class^="container"]:has(
-    div[class^="children"] > div[class^="soundboardRow"]
-  ) {
-  display: none;
-}
-
-/* Appearance: Hide app icon upsell */
-div[class^="selectionGroup"]:has(
-    div[role="radiogroup"]
-      > div
-      > div[class^="presets"]
-      > [class*="appIconSelectionContainer"]
-  ) {
-  display: none;
-}
-
-/* Appearance: Theme upsells */
-section[class*="basicThemeSelectors_"] + section {
-  display: none;
-}
-
-/* Hide sticker picker */
-button[id="sticker-picker-tab"] {
-  display: none;
-}
-
-/* Hide message size upsells */
-div[class^="characterCount"] > div[class*=" upsell_"] {
-  display: none;
-}
-
-/* Hide Go Live quality upsells */
-button[class*=" selectorButtonPremiumRequired"] {
-  display: none;
-}
-
-/* Hide ad in profile banners */
-div[class^="premiumIconWrapper"] {
-  display: none;
-}
-
-/* ------------- */
-/* Server boosts */
-/* ------------- */
-
-/* Server Boost button in top left dropdown */
-div[id="guild-header-popout-premium-subscribe"] {
-  display: none;
-}
-div[role="group"]:has(div[id="guild-header-popout-premium-subscribe"])
-  + div[role="separator"] {
-  display: none;
-}
-
-/* Server settings: Boost tab */
-div[class^="serverBoostTabItem"] {
-  display: none;
-}
-div[class^="serverBoostTabItem"] + div[class^="separator"] {
-  display: none;
-}
-
-/* Server settings: Overview */
-div[class^="divider"]:has(div > div > div > div[class^="upsell"]) {
-  display: none;
-}
-
-/* Server settings: Stickers tab */
-/* NOTE: risky, but seems ok for now */
-div[class^="children_"] > div[class^="upsellContainer"] {
-  display: none;
-}
-div[class*="tierHeaderUnlocked"] + div {
-  display: none;
-}
-div[class*="tier_"]:has(div[class^="tierHeaderLocked"]) {
-  display: none;
-}
-div[class^="tierInProgress"] {
-  display: none;
-}
-
-/* Server settings: Custom Invite Link tab */
-button[class^="shinyButton"]:has(div[class*="upsellButton"]) {
-  display: none;
-}
-
-/* Boost progress bar */
-/* NOTE: risky, but seems ok for now */
-ul[aria-label="Channels"] > div[role="button"][class^="container"] {
-  display: none;
-}
-
-/* --------------- */
-/* Super reactions */
-/* --------------- */
-
-/* Super reactions button */
-button[id="super-reaction-picker-tab"] {
-  display: none;
-}
-
-/* Super reaction animation */
-div[class*="shakeReaction"] {
-  animation: none !important;
-}
-div[class^="reactionInner"] > div > div[class^="effectsWrapper"] {
-  display: none;
-}
-img[class*="hideEmoji"] {
-  animation: blink-emoji 1s linear infinite;
-  opacity: 255;
-}
-@keyframes blink-emoji {
-  50% {
-    opacity: 0;
+/* Collasping channel list */
+@media only screen and (max-width: 1024px) {
+  :root {
+    --channel-list-width: 48px;
   }
-}
-
-/* Add Super Reaction menu item */
-#message-add-reaction-1 {
-  display: none;
-}
-#message-actions-add-reaction-1 {
-  display: none;
-}
-div[aria-label="Add Super Reaction"] {
-  display: none;
-}
-
-/* Upsell when hovering a Super Reaction */
-div[class^="burstReactionTooltipPrompt"] {
-  display: none;
-}
-
-/* ------------------ */
-/* General annoyances */
-/* ------------------ */
-
-/* Avatar decorations */
-svg[class*="avatarDecoration_"] {
-  display: none;
-}
-img[class^="avatarDecoration_"] {
-  display: none;
-}
-
-/* Profile effects */
-div[class^="profileEffects"] {
-  display: none;
-}
-
-/* Animated "Activities" hover effect in calls */
-/* NOTE: would be nice to disable the white hover effect,
- * but that'd break when you're actually in an activity */
-div[aria-labelledby^="vc-activities"] {
-  display: none;
-}
-
-/* Bugfix laggy server scroll */
-div[data-dnd-name] > div[class^="wrapper"] svg {
-  overflow: hidden;
-}
-
-/* Hide Help button */
-div[aria-label="Help"] {
-  display: none;
-}
-
-/* Hide explore servers button */
-div[aria-label="Servers"] + div + div {
-  display: none;
-}
-
-/* Hide download button */
-div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div {
-  display: none;
-} /* separator */
-div[aria-label="Servers"] + div[class^="tutorialContainer"] + div + div + div {
-  display: none;
-} /* button & click target */
-
-/* "Falloween" in (user) profile */
-[class*="falloweenBackgroundImage"] {
-  display: none;
-}
-[class*="falloweenArtContainer"] {
-  display: none;
-}
-[class*="artContainer"] {
-  display: none;
-}
-/* Collapse sidebars when screen is narrow */
-@media (max-width: 1024px) {
-  /* channel list*/
-  .sidebar_ded4b5 {
-    width: 60px;
-    transition-duration: 0.125s;
+  :root:has([aria-label="Thread Actions"], [aria-label="Channel Actions"]) {
+    --channel-list-width: 240px !important;
   }
-  .sidebar_ded4b5:hover {
+
+  :root:has(div[class^="sidebar"]:hover, [aria-label="Servers sidebar"]:hover) {
+    --channel-list-width: 240px !important;
+  }
+
+  div[class^="base"] > div[class^="content__"] > div[class^="sidebar"] {
+    width: var(--channel-list-width);
+    transition: width 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 100ms;
+  }
+
+  /* Members List */
+  .container_f79ab4 {
+    width: 48px;
+    transition: width 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 100ms;
+    position: absolute;
+    right: 0;
+  }
+  .container_f79ab4:hover {
     width: 240px;
   }
-  /* members list */
-  .membersWrap__90226{
-    position: absolute;
-    right:-200px;
-    transition: 0.125s;
-  }
-  .membersWrap__90226:hover{
-    right: 0px;
-  }
 }
 
-/* Attatch animation */
-/* https://github.com/ToxicAven/discord */
-html:not(.reduce-motion)
-  div[class^="scrollableContainer"]
-  ul[class^="channelAttachmentArea"] {
-  animation-name: attachmentAnimation;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-}
-
-@keyframes attachmentAnimation {
-  from {
-    height: 0;
-  }
-  to {
-    height: 218px;
-  }
-}
-/* Search bar animation */
-/* https://github.com/ToxicAven/discord */
-html:not(.reduce-motion)
-  section[class^="title"]
-  div[class^="toolbar"]
-  div[class^="search"]
-  div[class^="searchBar"] {
-  background: none !important;
-  width: 24px;
-  color: var(--color-text);
-  transition: width 0.2s, padding 0.5s;
-  padding: 0;
-}
-html:not(.reduce-motion)
-  section[class^="title"]
-  div[class^="toolbar"]
-  div[class^="search"]
-  div[class^="searchBar"]
-  div[class^="iconContainer"] {
-  width: 24px !important;
-  height: 24px;
-  cursor: pointer !important;
-}
-html:not(.reduce-motion)
-  section[class^="title"]
-  div[class^="toolbar"]
-  div[class^="search"]
-  div[class^="searchBar"],
-html:not(.reduce-motion)
-  section[class^="title"]
-  div[class^="toolbar"]
-  div[class^="search"]
-  div[class^="searchBar"]
-  svg {
-  color: var(--color-text);
-  width: 24px;
-  height: 24px;
-  padding: 0.5px;
-}
-html:not(.reduce-motion)
-  section[class^="title"]
-  div[class^="toolbar"]
-  div[class*="open_"]
-  div[class^="searchBar"] {
-  width: 300px !important;
-  padding: 0 10px !important;
-}
-html:not(.reduce-motion)
-  section[class^="title"]
-  div[class^="toolbar"]
-  div[class*="open_"]
-  div[class^="searchBar"]
-  svg {
-  color: var(--text-muted);
-  transform: scale(0.8);
-}
-/* Make new messages bar not be so long */
-div[class^="newMessagesBar"] {
-  width: fit-content;
-}
-/* Change jump to present bar appearence */
-div[class^="jumpToPresentBar"] {
-  width: fit-content;
-  padding-inline: 0rem;
-  padding-block: 0rem;
-  margin-left: auto;
-  margin-right: 2rem;
-  transform: translateY(-2rem);
-  border-radius: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-div[class^="jumpToPresentBar"] > button:nth-child(1) {
-  display: none !important;
-}
-div[class^="jumpToPresentBar"] > button:nth-child(2) {
-  font-weight: bold !important;
-}
-svg[class^="barButtonIcon"] {
-  transform: scale(1.5);
-}
-/* Change role styles in user popout */
-.role__631a3 {
-  transform: translate(0);
-  overflow: hidden;
-  border: 0;
-
-  --transparency: 0.4; /*Change Background Opacity*/
-  border-radius: 5px; /*Change Roundness of Roles*/
-}
-.role__631a3 .roleRemoveIcon__7f63d {
-  margin: 0;
-  left: unset;
-  transform: translate(50%, -50%);
-}
-.role__631a3 .roleRemoveButton__737f2 {
-  position: static;
-}
-.role__631a3 .roleCircle_bae511:after {
-  content: "";
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: inherit;
-  opacity: var(--transparency);
-}
-:root {
-  --roles-roundness: 0; /* change the 0 to any other number if you want the roles to be fully round */
-  --roles-roundness-calc: calc((var(--roles-roundness) + 0.21) * 25px);
-}
-.role__631a3 {
-  transform: translate(0);
-  border: 0;
-  border-radius: var(--roles-roundness-calc);
-}
-.role__631a3 .roleRemoveIcon__7f63d {
-  margin: 0;
-  left: unset;
-  transform: translate(50%, -50%);
-}
-.role__631a3 .roleRemoveButton__737f2 {
-  position: static;
-}
-.role__631a3 .roleCircle_bae511:before {
-  content: "";
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  position: absolute;
-  background: inherit;
-  border-radius: var(--roles-roundness-calc);
-  border: 2px solid transparent;
-  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-}
-.role__631a3 {
-  position: relative;
-  background: none !important;
-  border: 0;
-}
-.roleRemoveButton__737f2 {
-  position: static;
-}
-.roleRemoveIcon__7f63d {
-  left: 10.5px;
-}
-.roleCircle_bae511 {
-  margin-left: 1px;
-}
-.roleCircle_bae511:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  border: 1px solid transparent;
-  border-radius: var(--radius-round);
-  box-sizing: border-box;
-  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  pointer-events: none;
-}
-.addButton_c648bf,
-.addRoleContainer__23777 {
-  background: none !important;
-  border: 1px solid hsl(214, calc(var(--saturation-factor, 1) * 8.2%), 33.3%);
-  border-radius: var(--radius-round);
+/* Folding search bar to icon */
+.search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a {
   width: 22px;
-  height: 22px;
-  padding: 0;
-}
-.role__631a3:has(.roleFlowerStar__170d5) {
-  border: 1px solid var(--header-primary);
-  border-radius: var(--radius-round);
-  padding: 0;
-}
-/* Role color in member list */
-.member_aa4760 span.username_d272d6::after {
-  content: "";
-  background: currentColor;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0.1;
-  left: 0;
-  top: 0;
-}
-/*  */
-.role__631a3 {
-  position: relative;
-  background: none !important;
-  border: 0;
-}
-.roleRemoveButton__737f2 {
-  position: static;
-}
-.roleRemoveIcon__7f63d {
-  left: 10.5px;
-}
-.roleCircle_bae511 {
-  margin-left: 1px;
-}
-.roleCircle_bae511:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit;
-  border: 1px solid transparent;
-  border-radius: var(--radius-round);
-  box-sizing: border-box;
-  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  pointer-events: none;
-}
-.addButton_c648bf,
-.addRoleContainer__23777 {
-  background: none !important;
-  border: 1px solid hsl(214, calc(var(--saturation-factor, 1) * 8.2%), 33.3%);
-  border-radius: var(--radius-round);
-  width: 22px;
-  height: 22px;
-  padding: 0;
-}
-.role__631a3:has(.roleFlowerStar__170d5) {
-  border: 1px solid var(--header-primary);
-  border-radius: var(--radius-round);
-  padding: 0;
-}
-/* ^ From better discord snippets */
-/* Background thingy in the chat */
-.username_d30d99[style] {
-  position: relative;
-  padding-inline: 5px;
-  border-radius: 5px;
-}
-.username_d30d99[style]::after {
-  content: "";
-  background: currentColor;
-  position: absolute;
-  inset: 0;
-  opacity: 0.2;
-  padding-inline: 5px;
-  border-radius: 5px;
-}
-/* Match channel text area to user container */
-/* https://discord.com/channels/1015060230222131221/1028106818368589824/1166651812200317018 */
-.form__13a2c {
-  padding: 0;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: transparent;
 }
 
-.channelTextArea__2e60f {
-  margin: 0;
+.searchBarComponent__8f95f {
+  background: transparent;
 }
 
-.scrollableContainer__33e06 {
-  border-radius: 0;
+.search_ac353c:not(.open_d3ab4e) .iconLayout__9d9a4 {
+  cursor: pointer;
 }
 
-.inner__9fd0b {
-  min-height: 48px;
-  padding-top: 4px;
+.search_ac353c:not(.open_d3ab4e) .iconContainer__9f124 {
+  transform: scale(1.4);
 }
 
-/* Move typing indicators */
-.typing__6fd1d {
-  top: -24px;
-  left: 0px;
-  width: fit-content;
-  padding-right: 9px;
-  border-radius: 0 8px 0 0;
-  background: var(--bg-overlay-3, var(--channeltextarea-background));
+.search_ac353c:not(.open_d3ab4e) .icon__5c8c7 {
+  color: var(--interactive-normal);
 }
 
-/* Remove single pixel padding from user container */
-.container_ca50b9 {
-  margin: 0;
+.search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7 {
+  color: var(--interactive-active);
 }
-/* End Match channel text area to user container */
-/* .contents_f41bb2 Such that this doesn't show up on embeds */
-.contents_f41bb2 .anchor_c8ddc0[title$=")"]::after {
-  font-size: 0.7rem;
-  content: " (" attr(href) ")";
-  opacity: 0.5;
-}
-/* Hide input if you can't talk */
-.channelTextAreaDisabled_c43b1c {
+
+/* Shiggy loader */
+.container__827e6 video.ready__61f2f {
   display: none;
 }
-/* Hide profile thing in channels & roles because it's broken */
-.profile_b28ef9 {
-  display: none;
-}
-.wrapper_fbbb73 {
-  margin: 0;
-}
-
-video[data-testid="app-spinner"] {
-  filter: saturate(0) brightness(0) invert(74%) sepia(4%) saturate(3176%)
-    hue-rotate(196deg) brightness(101%) contrast(103%);
-}
-.theme-dark .combo__57290 .key__06fe6 {
-  color: var(--background-primary);
-}
-
-/* Glow on username on user panel */
-/* https://discord.com/channels/1015060230222131221/1134844326933954622/1183600285252329522 */
-.panelTitleContainer__7a748 > .text-sm-normal_e612c7 {
-  background: linear-gradient(to right, #f584ff, #1c4ae2);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
-  text-shadow: 0 0 8px #ffa5e288, 0 0 8px #728fed88;
-  overflow: visible;
+.content_de05de::before {
+  visibility: visible;
+  content: "";
+  display: block;
+  background: url(https://media.discordapp.net/stickers/1217112512374505613.png?size=240);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 128px;
+  height: 128px;
+  margin: auto;
+  margin-bottom: 48px;
 }
