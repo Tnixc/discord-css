@@ -16,9 +16,9 @@
   /*--pop-up-color: black; /*uncomment for custom Popup color*/
   --context-menu-border: 1px solid var(--info-help-background); /*uncomment for custom border*/
 
-  --font-primary: "SF Pro";
-  --font-display: "SF Pro";
-  --font-headline: "SF Pro";
+  --font-primary: "SF Pro", Inter, Geist, system-ui;
+  --font-display: "SF Pro", Inter, Geist, system-ui;
+  --font-headline: "SF Pro", Inter, Geist, system-ui;
   --font-code: "Geist Mono";
 }
 /* Fix icons on context menus */
