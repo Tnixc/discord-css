@@ -1,3 +1,5 @@
+/* @import url("https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css"); */
+
 /* Red NSFW warning indicator in channels  */
 @import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/NSFWChannelRecolor.css");
 /* Transparent popups */
@@ -7,54 +9,155 @@
 
 /* Transparent popups config */
 :root {
-  --blur-popup: 1rem; /*Popup blur size*/
-  --opacity-popup: 0.8; /*Popup background opacity*/
-  --radius-popup: 2rem; /*Popup border radius*/
-  --radius-context: 1rem; /*Context menu popups radius*/
+  --blur-popup: 1rem;
+  /*Popup blur size*/
+  --opacity-popup: 0.8;
+  /*Popup background opacity*/
+  --radius-popup: 2rem;
+  /*Popup border radius*/
+  --radius-context: 1rem;
+  /*Context menu popups radius*/
   /*--pop-up-color: black; /*uncomment for custom Popup color*/
-  --context-menu-border: 1px solid var(--info-help-background); /*uncomment for custom border*/
+  --context-menu-border: 1px solid var(--info-help-background);
+  /*uncomment for custom border*/
 
-  --font-primary: "SF Pro", Inter, Geist, system-ui;
-  --font-display: "SF Pro", Inter, Geist, system-ui;
-  --font-headline: "SF Pro", Inter, Geist, system-ui;
+  --font-primary: "SF Pro";
+  --font-display: "SF Pro";
+  --font-headline: "SF Pro";
   --font-code: "Geist Mono";
 }
-/* Fix icons on context menus */
+
+/* message bar */
+.form_d8a4a1 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Hide message bar if you can't speak */
+.channelTextAreaDisabled_d0f0e8 {
+  display: none;
+}
+
+/* Message bar */
+.scrollableContainer_ff917f {
+  border-radius: 0;
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner__9fd0b.sansAttachButton__5f863 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.attachWrapper_d01704 {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+}
+
+div.attachWrapper_d01704>button {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 24px;
+  display: block;
+  height: min-content;
+}
+
+.buttons__7ecff {
+  margin: 0 !important;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.textArea_a86690 {
+  flex-grow: 1;
+}
+
+.channelTextArea_c2094b {
+  margin-bottom: 0;
+}
+
+.base__06abc {
+  left: 0;
+  bottom: 53px;
+}
 
 /* Collasping channel list */
 @media only screen and (max-width: 1024px) {
-  :root {
-    --channel-list-width: 48px;
-  }
-  :root:has([aria-label="Thread Actions"], [aria-label="Channel Actions"]) {
-    --channel-list-width: 240px !important;
+  .content__76dcf {
+    padding-left: 48px;
   }
 
-  :root:has(div[class^="sidebar"]:hover, [aria-label="Servers sidebar"]:hover) {
-    --channel-list-width: 240px !important;
+  .sidebar_e031be {
+    position: fixed;
+    top: 0;
+    left: 72px;
+    background: steelblue;
+    overflow-y: scroll;
+    width: 48px;
+    z-index: 999;
+    height: 100vh;
+    transition: width 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.075);
   }
 
-  div[class^="base"] > div[class^="content__"] > div[class^="sidebar"] {
-    width: var(--channel-list-width);
-    transition: width 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition-delay: 100ms;
+  .sidebar_e031be:hover {
+    width: 240px;
+  }
+
+  .scrollerInner__37fee {
+    padding-right: 48px;
+  }
+
+  .form_d8a4a1 {
+    padding-right: 48px;
+  }
+
+  .base__06abc {
+    right: 48px;
   }
 
   /* Members List */
   .container_f79ab4 {
     width: 48px;
-    transition: width 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition-delay: 100ms;
+    transition: width 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.075);
     position: absolute;
     right: 0;
   }
+
   .container_f79ab4:hover {
     width: 240px;
+  }
+
+  .membersWrap__5ca6b {
+    min-width: 48px;
+    position: absolute;
+    right: 0;
+  }
+
+  .members__573eb {
+    width: 48px;
+    transition: width 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.075);
+  }
+
+  .membersWrap__5ca6b:hover {
+    width: 240px;
+
+    & .members__573eb {
+      width: 240px;
+    }
   }
 }
 
 /* Folding search bar to icon */
-.search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a {
+.search_ac353c:not(.open_d3ab4e)>.searchBar__5a20a {
   width: 22px;
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   background: transparent;
@@ -84,6 +187,7 @@
 .container__827e6 video.ready__61f2f {
   display: none;
 }
+
 .content_de05de::before {
   visibility: visible;
   content: "";
@@ -96,4 +200,64 @@
   height: 128px;
   margin: auto;
   margin-bottom: 48px;
+}
+
+/* Compress bot messages */
+/**** Compress GitHub Bot's star and fork messages ****/
+[class^="grid_"]:has(> :last-child:nth-child(2)) {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.1rem 1rem 0.6rem 0.75rem;
+}
+
+/* add padding between username and link */
+[class^="grid_"]:has(> :last-child:nth-child(2)) [class^="embedTitle_"],
+[class^="grid_"]:has(> :last-child:nth-child(2)) [class^="embedDescription_"] {
+  padding-left: 12px;
+}
+
+/* Hide the extra GitHub bot avatars */
+[class^="messageListItem_"]:has([class^="botText_"]):has([class^="grid_"] > :last-child:nth-child(2)) [class^="contents_"] {
+  display: none;
+}
+
+/* Reduce padding between selected bot messages */
+[class^="messageListItem_"]:has([class^="botText_"]):has([class^="grid_"] > :last-child:nth-child(2)) [class*="groupStart_"] {
+  margin-top: -12px;
+}
+
+.container__62863:has([class^="grid_"] > :last-child:nth-child(2)) {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  top: 12px;
+}
+
+/* I do some weird offseting, it just looks better to not have a misaligned hover overlay */
+.message_ccca67:has([class^="grid_"]):hover {
+  background-color: #00000000 !important;
+  background: #00000000 !important;
+  /* Why do you do this, Discord Nitro themes.. */
+}
+
+/* Align small bot messages with large ones */
+/* Alternately, you could remove their background color or just live with mismatched lengths */
+[class^="gridContainer_"],
+[class^="embedWrapper_"] {
+  min-width: 525px;
+}
+
+/* Hide message bar buttons except emoji */
+.buttons__7ecff>*:not(:nth-child(4)) {
+  display: none;
+}
+
+/* NO nitro here */
+/* Remove Shop and Nitro Buttons */
+[class^="channel_"][class*="container_"]:has(a[href="/store"]),
+[class^="channel_"][class*="container_"]:has(a[href="/shop"]) {
+  display: none;
+}
+
+div.container_bc43c1.containerWithMargin__3a652 {
+  display: none;
 }
