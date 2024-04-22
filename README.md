@@ -5,6 +5,7 @@
 Used with `https://github.com/Tnixc/tokyo/discord/theme.css`
 
 # Features
+
 - Remove some nitro elements
 - Folding channel and member lists when window is narrow
 - Puts message bar at bottom of screen
