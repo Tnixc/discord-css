@@ -2,25 +2,11 @@
 
 /* Red NSFW warning indicator in channels  */
 @import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/NSFWChannelRecolor.css");
-/* Transparent popups */
-@import url("https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css");
 /* Better quick switcher */
 @import url("https://dablulite.github.io/css-snippets/QuickSwitchV2/import.css");
 
 /* Transparent popups config */
 :root {
-  --blur-popup: 1rem;
-  /*Popup blur size*/
-  --opacity-popup: 0.8;
-  /*Popup background opacity*/
-  --radius-popup: 2rem;
-  /*Popup border radius*/
-  --radius-context: 1rem;
-  /*Context menu popups radius*/
-  /*--pop-up-color: black; /*uncomment for custom Popup color*/
-  --context-menu-border: 1px solid var(--info-help-background);
-  /*uncomment for custom border*/
-
   --font-primary: "SF Pro";
   --font-display: "SF Pro";
   --font-headline: "SF Pro";
