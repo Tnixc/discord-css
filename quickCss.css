@@ -20,7 +20,7 @@
 }
 
 /* Hide message bar if you can't speak */
-.channelTextAreaDisabled_d0f0e8 {
+.form_d8a4a1:has(.channelTextAreaDisabled_d0f0e8)  {
   display: none;
 }
 
@@ -77,6 +77,9 @@ div.attachWrapper_d01704 > button {
 .textArea_a86690 {
   flex-grow: 1;
 }
+.textArea_a86690:nth-child(1){
+  margin-left: 1rem;
+}
 
 .channelTextArea_c2094b {
   margin-bottom: 0;
@@ -84,9 +87,18 @@ div.attachWrapper_d01704 > button {
 
 .base__06abc {
   left: 0;
+  background-color: #25273A99;
+  backdrop-filter: blur(1rem);
   bottom: 53px;
+  width: fit-content;
+  min-width: 0;
+  right: unset;
+  padding-inline: 4px;
+  border-radius: 4px;
 }
-
+.form_d8a4a1:has(.attachedBars_c1606a) .base__06abc {
+  bottom: 90px;
+}
 /* Collasping channel list */
 @media only screen and (max-width: 1024px) {
   .content__76dcf {
@@ -285,4 +297,25 @@ div.container_bc43c1.containerWithMargin__3a652 {
 
 #popout_316 {
   display: none;
+}
+
+.shinyButton_d5e126 {
+  display: none;
+}
+
+.barBase__8839d{
+  width: fit-content;
+}
+
+.jumpToPresentBar__69174{
+  bottom: 2rem;
+  height: fit-content;
+  box-shadow: var(--elavation-high);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 2rem;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  left: unset;
 }
