@@ -1,5 +1,4 @@
 /* @import url("https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css"); */
-
 /* Red NSFW warning indicator in channels  */
 @import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/NSFWChannelRecolor.css");
 /* Better quick switcher */
@@ -318,4 +317,19 @@ div.container_bc43c1.containerWithMargin__3a652 {
   padding: 0.2rem;
   border-radius: 1rem;
   left: unset;
+}
+
+.botText_daff56 {    
+    font-size: 10px;
+    visibility: hidden;
+    position: relative;
+    
+}
+
+
+.botText_daff56::before { 
+    content: 'BOT';
+    visibility: visible;
+    font-size: 10.5px;
+    position: absolute;
 }
