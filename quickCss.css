@@ -19,7 +19,7 @@
 }
 
 /* Hide message bar if you can't speak */
-.form_d8a4a1:has(.channelTextAreaDisabled_d0f0e8)  {
+.form_d8a4a1:has(.channelTextAreaDisabled_d0f0e8) {
   display: none;
 }
 
@@ -76,7 +76,7 @@ div.attachWrapper_d01704 > button {
 .textArea_a86690 {
   flex-grow: 1;
 }
-.textArea_a86690:nth-child(1){
+.textArea_a86690:nth-child(1) {
   margin-left: 1rem;
 }
 
@@ -86,7 +86,7 @@ div.attachWrapper_d01704 > button {
 
 .base__06abc {
   left: 0;
-  background-color: #25273A99;
+  background-color: #25273a99;
   backdrop-filter: blur(1rem);
   bottom: 53px;
   width: fit-content;
@@ -302,11 +302,11 @@ div.container_bc43c1.containerWithMargin__3a652 {
   display: none;
 }
 
-.barBase__8839d{
+.barBase__8839d {
   width: fit-content;
 }
 
-.jumpToPresentBar__69174{
+.jumpToPresentBar__69174 {
   bottom: 2rem;
   height: fit-content;
   box-shadow: var(--elavation-high);
@@ -319,17 +319,15 @@ div.container_bc43c1.containerWithMargin__3a652 {
   left: unset;
 }
 
-.botText_daff56 {    
-    font-size: 10px;
-    visibility: hidden;
-    position: relative;
-    
+.botText_daff56 {
+  font-size: 10px;
+  visibility: hidden;
+  position: relative;
 }
 
-
-.botText_daff56::before { 
-    content: 'BOT';
-    visibility: visible;
-    font-size: 10.5px;
-    position: absolute;
+.botText_daff56::before {
+  content: "BOT";
+  visibility: visible;
+  font-size: 10.5px;
+  position: absolute;
 }
