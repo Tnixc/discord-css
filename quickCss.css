@@ -6,10 +6,10 @@
 
 /* Transparent popups config */
 :root {
-  --font-primary: "SF Pro";
-  --font-display: "SF Pro";
-  --font-headline: "SF Pro";
-  --font-code: "Geist Mono";
+  --font-primary: SF Pro, Inter, system-ui;
+  --font-display: SF Pro, Inter, system-ui;
+  --font-headline: SF Pro, Inter, system-ui;
+  --font-code: "Liga Berkeley Mono", Geist Mono;
 }
 
 /* message bar */
@@ -319,15 +319,14 @@ div.container_bc43c1.containerWithMargin__3a652 {
   left: unset;
 }
 
-.botText_daff56 {
-  font-size: 10px;
-  visibility: hidden;
-  position: relative;
+/* Scrollbars */
+.sidebar_e031be::-webkit-scrollbar{
+  display: none !important;
 }
 
-.botText_daff56::before {
-  content: "BOT";
-  visibility: visible;
-  font-size: 10.5px;
-  position: absolute;
+*::-webkit-scrollbar{
+  width: 2px !important;
+}
+* {
+  scrollbar-width: 2px !important;
 }
