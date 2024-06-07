@@ -367,12 +367,40 @@ div.container_bc43c1.containerWithMargin__3a652 {
     box-sizing: border-box;
     position: absolute;
     background: inherit;
-    border: 2px solid var(--text-normal);
     opacity: .1;
     border-radius: 8px;
     /* New profile pill radius, new standart discord is 4 px */
 }
-
+/* Mod view */
 .roles__74a2b {
     color: var(--text-normal);
+}
+
+.container__532be, .userProfileInnerThemedPremiumWithoutBanner_ee8277, .userProfileInnerThemedWithBanner_e9e7c5, div.profileThemedContainer__6e645 {
+    background-color: var(--background-secondary) !important;
+    color: var(--text-normal) !important;
+}
+
+.container_cbd141, .bottomRow__7d44b, .innerContainer__7b4c0, .modInfoItem_df526b, .bottomRowActionDisabled__08659 .innerBottomRowAction__8a3df {
+    background-color: var(--background-primary);
+    color: var(--text-normal) !important;
+}
+
+#app-mount > div.appAsidePanelWrapper__5e6e2 > div.notAppAsidePanel__95814 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div:nth-child(3) > div > div, #app-mount > div.appAsidePanelWrapper__5e6e2 > div.notAppAsidePanel__95814 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.guildSidebar__5583b > div > div {
+    --custom-theme-mix-text: var(--text-normal) !important;
+    --profile-gradient-primary-color: var(--background-primary) !important;
+    --profile-gradient-secondary-color: var(--background-primary) !important;
+}
+
+#app-mount > div.appAsidePanelWrapper__5e6e2 > div.notAppAsidePanel__95814 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div:nth-child(3) > div > div > div > div > div.container_cbd141 > div.topRow_b0479e > div.memberNameContainer__4d221 > div.memberName_d8b665 > div > span, .text-sm-normal__95a78, .changeStr__50757, .text-sm-medium__726be, .eyebrow_b3f8ba, .h5__28baa, .label_bf6957, .legend__2459b, .text-sm-semibold_d260b0, .text-xs-medium_d3e0f1, .heading-md-semibold__76ba1, .text-md-medium_a84e09, #app-mount > div.appAsidePanelWrapper__5e6e2 > div.notAppAsidePanel__95814 > div.app_b1f720 > div > div.layers__1c917.layers_a23c37 > div > div > div > div > div.guildSidebar__5583b > div > div > div > div > div.container_cbd141 > div.topRow_b0479e > div.memberNameContainer__4d221 > div.memberName_d8b665 > div > span {
+    color: var(--text-normal) !important;
+}
+
+.topRow_b0479e, .bottomRowAction_b95fd7, .header_aacd9b, .innerContainer__8ffc4  {
+    background-color: var(--background-secondary) !important;
+    color: var(--text-muted) !important;
+}
+
+.modInfoItemIcon__36a71 {
+    color: var(--text-muted)
 }
