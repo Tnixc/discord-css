@@ -404,3 +404,7 @@ div.container_bc43c1.containerWithMargin__3a652 {
 .modInfoItemIcon__36a71 {
     color: var(--text-muted)
 }
+/* Bot tags */
+[class*=botText] {
+    font-weight: 500;
+}
