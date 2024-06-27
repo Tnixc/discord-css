@@ -3,7 +3,7 @@
   --font-primary: SF Pro, Inter, system-ui;
   --font-display: SF Pro, Inter, system-ui;
   --font-headline: SF Pro, Inter, system-ui;
-  --font-code: "LigaBerkeleyMono Nerd Font", "Liga Berkeley Mono", Geist Mono;
+  --font-code: "BerkeleyMono Nerd Font", "LigaBerkeleyMono Nerd Font", "Liga Berkeley Mono", Geist Mono, ui-monospace;
 }
 
 /* message bar */
