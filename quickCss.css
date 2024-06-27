@@ -1,10 +1,3 @@
-/* @import url("https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css"); */
-/* Red NSFW warning indicator in channels  */
-@import url("https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/NSFWChannelRecolor.css");
-/* Better quick switcher */
-@import url("https://dablulite.github.io/css-snippets/QuickSwitchV2/import.css");
-@import url("https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css");
-
 /* Fonts */
 :root {
   --font-primary: SF Pro, Inter, system-ui;
