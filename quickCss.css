@@ -1,8 +1,8 @@
 /* Fonts */
 :root {
-  --font-primary: SF Pro, Inter, system-ui;
-  --font-display: SF Pro, Inter, system-ui;
-  --font-headline: SF Pro, Inter, system-ui;
+  --font-primary: Inter, system-ui;
+  --font-display: Inter, system-ui;
+  --font-headline: Inter, system-ui;
   --font-code: "BasierMonoSquare Nerd Font", "BerkeleyMono Nerd Font", "LigaBerkeleyMono Nerd Font", "Liga Berkeley Mono", Geist Mono, ui-monospace;
 }
 
